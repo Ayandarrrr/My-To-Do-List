@@ -1,4 +1,3 @@
-// script.js
 
 const taskInput = document.querySelector("#taskInput");
 const addBtn = document.querySelector("#addBtn");
@@ -9,7 +8,7 @@ let tasks = JSON.parse(localStorage.getItem("tasks")) || [];
 
 renderTasks();
 
-// Add Task
+
 addBtn.addEventListener("click", () => {
 const taskText = taskInput.value.trim();
 
@@ -29,7 +28,7 @@ renderTasks();
 taskInput.value = "";
 });
 
-// Render Tasks
+
 function renderTasks(filter = "all") {
 
 taskList.innerHTML = "";
@@ -67,7 +66,7 @@ Delete
 </div>
 `;
 
-// Complete Task
+
 li.querySelector(".complete-btn").addEventListener("click", () => {
 
 task.completed = !task.completed;
@@ -76,7 +75,7 @@ saveTasks();
 renderTasks(getCurrentFilter());
 });
 
-// Delete Task
+
 li.querySelector(".delete-btn").addEventListener("click", () => {
 
 tasks = tasks.filter(t => t.id !== task.id);
@@ -90,12 +89,12 @@ taskList.appendChild(li);
 });
 }
 
-// Save to Local Storage
+
 function saveTasks(){
 localStorage.setItem("tasks", JSON.stringify(tasks));
 }
 
-// Filter Tasks
+
 filterButtons.forEach(button => {
 
 button.addEventListener("click", () => {
@@ -111,7 +110,7 @@ renderTasks(filter);
 
 });
 
-// Get Current Filter
+
 function getCurrentFilter(){
 
 const activeButton = document.querySelector(".filter-btn.active");
