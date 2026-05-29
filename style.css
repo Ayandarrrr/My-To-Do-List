@@ -1,0 +1,134 @@
+/* style.css */
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap');
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Poppins', sans-serif;
+}
+
+body{
+background:#ffeef5;
+display:flex;
+justify-content:center;
+align-items:center;
+min-height:100vh;
+padding:20px;
+}
+
+.container{
+background:#fff;
+width:100%;
+max-width:500px;
+padding:30px;
+border-radius:25px;
+box-shadow:0 10px 25px rgba(0,0,0,0.1);
+}
+
+h1{
+text-align:center;
+color:#ff6fa5;
+margin-bottom:25px;
+}
+
+.input-section{
+display:flex;
+gap:10px;
+margin-bottom:20px;
+}
+
+.input-section input{
+flex:1;
+padding:12px;
+border:2px solid #ffc7da;
+border-radius:12px;
+outline:none;
+font-size:16px;
+}
+
+.input-section button{
+padding:12px 18px;
+border:none;
+background:#ff8fb7;
+color:white;
+border-radius:12px;
+cursor:pointer;
+transition:0.3s;
+}
+
+.input-section button:hover{
+background:#ff6fa5;
+}
+
+.filters{
+display:flex;
+justify-content:center;
+gap:10px;
+margin-bottom:20px;
+}
+
+.filter-btn{
+padding:8px 14px;
+border:none;
+border-radius:10px;
+background:#ffd6e5;
+cursor:pointer;
+transition:0.3s;
+}
+
+.filter-btn.active{
+background:#ff8fb7;
+color:white;
+}
+
+#taskList{
+list-style:none;
+}
+
+.task{
+background:#fff4f8;
+padding:15px;
+border-radius:15px;
+margin-bottom:12px;
+display:flex;
+justify-content:space-between;
+align-items:center;
+border:1px solid #ffd6e5;
+}
+
+.task.completed span{
+text-decoration:line-through;
+opacity:0.6;
+}
+
+.task-buttons{
+display:flex;
+gap:8px;
+}
+
+.complete-btn,
+.delete-btn{
+border:none;
+padding:8px 12px;
+border-radius:8px;
+cursor:pointer;
+transition:0.3s;
+}
+
+.complete-btn{
+background:#b8f2c2;
+}
+
+.delete-btn{
+background:#ffb3c1;
+}
+
+.complete-btn:hover{
+opacity:0.8;
+}
+
+.delete-btn:hover{
+opacity:0.8;
+}
