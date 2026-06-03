@@ -132,3 +132,141 @@ opacity:0.8;
 .delete-btn:hover{
 opacity:0.8;
 }
+
+/* Styling for the priority dropdown menu */
+#taskPriority {
+  padding: 12px;
+  border: 2px solid #ffc7da;
+  border-radius: 12px;
+  outline: none;
+  background-color: #fff;
+  cursor: pointer;
+  font-size: 14px;
+  font-family: 'Poppins', sans-serif;
+  transition: 0.3s;
+  flex: 0.8;
+}
+
+#taskPriority:hover {
+  border-color: #ff8fb7;
+}
+
+#taskPriority:focus {
+  border-color: #ff6fa5;
+}
+
+/* Task content wrapper */
+.task-content {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  flex: 1;
+}
+
+.task-text {
+  word-break: break-word;
+}
+
+.task-priority {
+  font-size: 12px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+/* Conditional Border Colors for the Task Items */
+.priority-high {
+  border-left: 5px solid #ff4d4d !important; /* Red */
+  background-color: #fff5f5; 
+}
+
+.priority-high .task-priority {
+  color: #ff4d4d;
+}
+
+.priority-medium {
+  border-left: 5px solid #ffcc00 !important; /* Yellow */
+  background-color: #fffdf0;
+}
+
+.priority-medium .task-priority {
+  color: #ffcc00;
+}
+
+.priority-low {
+  border-left: 5px solid #2ced7e !important; /* Green */
+  background-color: #f2fff7;
+}
+
+.priority-low .task-priority {
+  color: #2ced7e;
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+  .container {
+    padding: 20px;
+    max-width: 100%;
+  }
+
+  h1 {
+    font-size: 24px;
+    margin-bottom: 20px;
+  }
+
+  .input-section {
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+
+  .input-section input {
+    flex: 1;
+    min-width: 150px;
+    font-size: 14px;
+  }
+
+  .input-section select {
+    flex: 1;
+    min-width: 130px;
+  }
+
+  .input-section button {
+    padding: 10px 14px;
+    font-size: 14px;
+    flex: 0 0 100%;
+    width: 100%;
+  }
+
+  .filters {
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+
+  .filter-btn {
+    padding: 6px 10px;
+    font-size: 13px;
+  }
+
+  .task {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+    padding: 12px;
+  }
+
+  .task-content {
+    width: 100%;
+  }
+
+  .task-buttons {
+    width: 100%;
+    gap: 6px;
+  }
+
+  .complete-btn,
+  .delete-btn {
+    flex: 1;
+    padding: 6px 10px;
+    font-size: 13px;
+  }
+}
